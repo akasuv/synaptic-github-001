@@ -1,14 +1,3 @@
 {
-  "name": "Node.js Dev Container",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-16",  // Use a Node.js container image
-  "postStartCommand": "npm install",   // Command to run after the container is started
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
-  },
-  "extensions": [
-    "dbaeumer.vscode-eslint",  // Example extension (you can add more depending on your needs)
-    "esbenp.prettier-vscode"
-  ],
-  "forwardPorts": [3000],  // Port to forward (example: for a web app running on port 3000)
-  "remoteUser": "vscode"   // Ensure that the commands are run under the correct user
+  "postStartCommand": "npm install"   // Command to run after the container is started
 }
