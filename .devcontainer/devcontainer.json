@@ -2,6 +2,6 @@
   "name": "Node.js",
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
   "postCreateCommand": "yarn install",
-
+  "forwardPorts": [3000],
   "postStartCommand": "yarn run start"   // Command to run after the container is started
 }
