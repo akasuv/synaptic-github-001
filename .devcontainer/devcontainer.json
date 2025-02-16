@@ -1,3 +1,7 @@
 {
-  "postStartCommand": "npm install"   // Command to run after the container is started
+  "name": "Node.js",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "postCreateCommand": "yarn install",
+
+  "postStartCommand": "yarn run"   // Command to run after the container is started
 }
