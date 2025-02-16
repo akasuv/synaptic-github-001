@@ -1,0 +1,1 @@
+{"name": "Node.js","dockerFile": "Dockerfile","settings": {"terminal.integrated.shell.linux": "/bin/bash"},"postCreateCommand": "npm install"}
