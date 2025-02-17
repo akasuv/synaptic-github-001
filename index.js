@@ -1,28 +1,14 @@
-const http = require('http');
-const url = require('url');
+const express = require('express');
+const app = express();
 
-const hostname = '127.0.0.1';
-const port = 3000;
+// Existing routes...
 
-const server = http.createServer((req, res) => {
-  const parsedUrl = url.parse(req.url, true);
-
-  if (parsedUrl.pathname === '/random') {
-    const randomNumber = Math.floor(Math.random() * 100);
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ random: randomNumber }));
-  } else if (parsedUrl.pathname === '/hi-leo') {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hi, Leo!\n');
-  } else {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello, Synaptic\n');
-  }
+// New route for hi-hongqiao
+app.get('/hi-hongqiao', (req, res) => {
+    res.send('你好，虹桥！');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
