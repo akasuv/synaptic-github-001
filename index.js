@@ -12,6 +12,10 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ random: randomNumber }));
+  } else if (parsedUrl.pathname === '/hi-leo') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hi, Leo!\n');
   } else {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
